@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<body>
+
+  <!-- NETLIFY FORM - HIDDEN (WAJIB) -->
+  <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+    <input type="text" name="bot-field" />
+    <input type="text" name="name" />
+    <input type="email" name="email" />
+    <textarea name="message"></textarea>
+  </form>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="container navbar-container">
+    <h2 class="logo">My Portofolio</h2>
+    <ul class="menu-items">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HOME -->
+<header id="home">
+  <!-- Overlay untuk efek gelap/terang -->
+  <div class="home-overlay"></div>
+  
+  <!-- Background Shapes untuk efek visual -->
+  <div class="home-shapes">
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+    <div class="shape shape-3"></div>
+    <div class="shape shape-4"></div>
+  </div>
+
+  <div class="container">
+    <div class="home-content">
+      <!-- Badge/Welcome Tag -->
+      <div class="welcome-badge">
+        <span class="badge-text">👋 Welcome to my portfolio</span>
+      </div>
+
+      <!-- Nama dengan animasi -->
+      <div class="name-wrapper">
+        <h1 class="greeting">Hello, I'm</h1>
+        <h1 class="name">Ramdani Bagus</h1>
+        <div class="typed-text">
+          <span class="profession">Quality Assurance</span>
+          <span class="profession-cursor">|</span>
+        </div>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <div class="scroll-indicator">
+        <a href="#about" class="scroll-link">
+          <span class="scroll-text">Scroll Down</span>
+          <span class="scroll-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <polyline points="19 12 12 19 5 12"></polyline>
+            </svg>
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ABOUT -->
+<section id="about" class="about-me">
+  <div class="container">
+    <h2 class="about-heading">About Me</h2>
+
+    <div class="about-content">
+      <!-- Left Content - Profile -->
+      <div class="left-content">
+        <div class="profile-wrapper">
+          <div class="profile-image-container">
+            <div class="profile-image">
+              <img src="Pas photo.png" alt="Profile Photo" class="profile-img">
+            </div>
+            <div class="profile-status">
+              <span class="status-dot"></span>
+              <span class="status-text">Available for work</span>
+            </div>
+          </div>
+          
+          <div class="profile-info">
+            <h3 class="profile-name">Ramdani Bagus Indra Saputra</h3>
+            <p class="profile-title">Quality Assurance</p>
+            <div class="profile-social">
+            <!-- GitHub -->
+            <a href="https://github.com/RamdaniBagus" target="_blank" class="social-icon">
+                <i class="fab fa-github"></i>
+            </a>
+            
+            <!-- LinkedIn -->
+            <a href="https://www.linkedin.com/in/ramdani-bagus/" target="_blank" class="social-icon">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/ramdani_103/" target="_blank" class="social-icon">
+                <i class="fab fa-instagram"></i>
+            </a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="about-text">
+          <p class="about-description">
+            My name is Ramdani Bagus Indra Saputra, a graduate
+            from Pamulang University with a
+            degree in Information Technology. Discipline,
+            honesty, and responsibility have always been
+            my priorities in completing every
+            task. I have experience as a Quality Assurance 
+            and Data Entry specialist.
+          </p>
+          
+        </div>
+      </div>
+
+      <!-- Right Content - Skills -->
+      <div class="right-content">
+        <div class="skills-header">
+          <h3 class="skills-title">My Skills</h3>
+        </div>
+
+        <div class="skills-bar">
+          <!-- PROGRAMMING -->
+          <div class="bar">
+            <div class="info">
+              <span class="skill-name">Programming</span>
+              <span class="skill-percent">60%</span>
+            </div>
+            <div class="progress-line">
+              <span style="width:60%"></span>
+            </div>
+          </div>
+
+          <!-- TESTING -->
+          <div class="bar">
+            <div class="info">
+              <span class="skill-name">Software Testing</span>
+              <span class="skill-percent">80%</span>
+            </div>
+            <div class="progress-line">
+              <span style="width:80%"></span>
+            </div>
+          </div>
+
+          <!-- PROBLEM SOLVING -->
+          <div class="bar">
+            <div class="info">
+              <span class="skill-name">Problem Solving</span>
+              <span class="skill-percent">70%</span>
+            </div>
+            <div class="progress-line">
+              <span style="width:70%"></span>
+            </div>
+          </div>
+
+          <!-- Hard Skill -->
+          <div class="bar">
+            <div class="info">
+              <span class="skill-name">Other Hard Skills</span>
+              <span class="skill-percent">80%</span>
+            </div>
+            <div class="progress-line">
+              <span style="width:70%"></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Additional Skills Cards -->
+        <div class="additional-skills">
+          <h4>Tools & Technologies</h4>
+          <div class="skill-tags">
+            <span class="skill-tag">Selenium</span>
+            <span class="skill-tag">Katalon Studio</span>
+            <span class="skill-tag">Robot Framework</span>
+            <span class="skill-tag">JMeter</span>
+            <span class="skill-tag">Postman</span>
+            <span class="skill-tag">Sweager</span>
+            <span class="skill-tag">Java</span>
+            <span class="skill-tag">HTML</span>
+            <span class="skill-tag">CSS</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">JIRA</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="experience">
+  <div class="container">
+    <h2 class="exp-heading">Experience</h2>
+
+    <div class="timeline">
+      <!-- Item 1 -->
+      <div class="timeline-item">
+        <div class="timeline-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+          </svg>
+        </div>
+        <div class="timeline-content">
+          <span class="timeline-date">June 2024 - December 2025</span>
+          <h3>Software Tester</h3>
+          <p class="timeline-company">Mediatama Indo Teknologi</p>
+          <p>
+            I conducted manual and automated testing on the central customs website, 
+            on the export-import menu and also their internal menu to find bugs or errors.
+          </p>
+          <div class="timeline-tags">
+            <span class="tag">Katalon Studio</span>
+            <span class="tag">Postman</span>
+            <span class="tag">Sweager</span>
+            <span class="tag">Gitlab</span>
+            <span class="tag">Google Spreadsheet</span>
+            <span class="tag">Jira</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="timeline-item">
+        <div class="timeline-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+            <line x1="8" y1="21" x2="16" y2="21"></line>
+            <line x1="12" y1="17" x2="12" y2="21"></line>
+          </svg>
+        </div>
+        <div class="timeline-content">
+          <span class="timeline-date">April 2024 - June 2024</span>
+          <h3>Admin Data Entry</h3>
+          <p class="timeline-company">Multiartha Prima Sejahtera</p>
+          <p>
+            Create, modify a document and enter the document link into Google Spreadsheets.
+        </p>
+          <div class="timeline-tags">
+            <span class="tag">Google Spreadsheet</span>
+            <span class="tag">Google Docs</span>
+            <span class="tag">Microsoft Word</span>
+          </div>
+        </div>
+      </div>
+    </div>
+</section>
+
+  <!-- PORTFOLIO -->
+
+  <section id="portfolio" class="portfolio">
+    <div class="container">
+      <div class="section-header">
+        <h1 class="proj-heading">My Projects</h1>
+        <p class="section-subtitle">Some projects I have worked on</p>
+      </div>
+
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="programming">Programming</button>
+        <button class="filter-btn" data-filter="testing">Testing</button>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Programming - Kalkulator Umur -->
+        <div class="project-card programming">
+          <div class="project-header">
+            <div class="project-icon">
+              <i class="fa-solid fa-file-code"></i>
+            </div>
+            <span class="project-category"><i class="fas fa-mobile-alt"></i> Web</span>
+          </div>
+          
+          <h2 class="project-title">Age Calculator</h2>
+          
+          <p class="project-description">
+            To calculate age based on input date, month, and year of birth.
+          </p>
+          
+          <div class="project-tech">
+            <span class="tech-tag">HTML</span>
+            <span class="tech-tag">CSS</span>
+            <span class="tech-tag">JavaScript</span>
+          </div>
+          
+          <div class="project-links">
+            <a href="https://github.com/RamdaniBagus/kalkulator-umur" 
+            target="blank"
+            class="project-btn">
+              <i class="fab fa-github"></i>
+              View Code
+            </a>
+          </div>
+        </div>
+
+        <!-- Programming - Aplikasi Resep -->
+        <div class="project-card programming">
+          <div class="project-header">
+            <div class="project-icon">
+              <i class="fas fa-mobile-alt"></i>
+            </div>
+            <span class="project-category"><i class="fas fa-mobile-alt"></i> Mobile App</span>
+          </div>
+          
+          <h2 class="project-title">Food & Drink Recipe App</h2>
+          
+          <p class="project-description">
+            An application for viewing the ingredients and steps used to make a particular food or drink.
+          </p>
+          
+          <div class="project-tech">
+            <span class="tech-tag">Flutter</span>
+            <span class="tech-tag">Dart</span>
+            <span class="tech-tag">HIVE</span>
+          </div>
+          
+          <div class="project-links">
+            <a href="https://github.com/RamdaniBagus/Aplikasi-Resep-Makanan-Dan-Minuman-Berbasis-Android" 
+            target="blank"
+            class="project-btn">
+              <i class="fab fa-github"></i>
+              View Code
+            </a>
+          </div>
+        </div>
+
+        <!-- Testing  -->
+        <div class="project-card testing">
+          <div class="project-header">
+            <div class="project-icon">
+              <i class="fas fa-bug"></i>
+            </div>
+            <span class="project-category"><i class="fas fa-flask"></i> Testing</span>
+          </div>
+          
+          <h2 class="project-title">Web UI & API Automation Testing</h2>
+          
+          <p class="project-description">
+            Automated testing for web UI and API testing. Equipped with reporting, 
+            data-driven testing, and CI/CD integration.
+          </p>
+          
+          <div class="project-tech">
+            <span class="tech-tag">Selenium</span>
+            <span class="tech-tag">Java</span>
+            <span class="tech-tag">TestNG</span>
+            <span class="tech-tag">Allure</span>
+          </div>
+          
+          <div class="project-links">
+            <a href="https://github.com/RamdaniBagus/FinalProjectTest" 
+            target="blank"
+            class="project-btn">
+              <i class="fab fa-github"></i>
+              View Code
+            </a>
+          </div>
+        </div>
+
+        <div class="project-card testing">
+          <div class="project-header">
+            <div class="project-icon">
+              <i class="fas fa-bug"></i>
+            </div>
+            <span class="project-category"><i class="fas fa-flask"></i> Testing</span>
+          </div>
+          
+          <h2 class="project-title">Web UI & API Automation Testing</h2>
+          
+          <p class="project-description">
+            Automated testing for web UI and API testing. Equipped with reporting, 
+            data-driven testing, and CI/CD integration.
+          </p>
+          
+          <div class="project-tech">
+            <span class="tech-tag">Selenium</span>
+            <span class="tech-tag">Java</span>
+            <span class="tech-tag">TestNG</span>
+            <span class="tech-tag">Allure</span>
+          </div>
+          
+          <div class="project-links">
+            <a href="https://github.com/RamdaniBagus/FinalProjectTest" 
+            target="blank"
+            class="project-btn">
+              <i class="fab fa-github"></i>
+              View Code
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <!-- Background Shapes -->
+  <div class="contact-shapes">
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+    <div class="shape shape-3"></div>
+  </div>
+
+  <div class="container">
+    <div class="contact-wrapper">
+      <!-- Header Section -->
+      <div class="contact-header">
+        <h2 class="contact-title">Contact Me</h2>
+        <p class="contact-description">
+          Have a project in mind or just want to say hello? Feel free to drop me a message!
+        </p>
+      </div>
+
+      <div class="contact-content">
+        <!-- Contact Information - ONLY EMAIL -->
+        <div class="contact-info">
+          <div class="info-card">
+            <div class="info-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="info-detail">
+              <h4>Email</h4>
+              <p>ramdanibagus001@gmail.com</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form - NETLIFY -->
+        <form 
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          netlify
+          action="/thank-you.html"  
+          class="contact-form" 
+          id="contactForm"
+        >
+          <!-- Required hidden field for Netlify -->
+          <input type="hidden" name="form-name" value="contact" />
+          
+          <!-- Honeypot field untuk anti spam -->
+          <p class="hidden" style="display: none;">
+            <label>
+              Don't fill this out: <input name="bot-field" />
+            </label>
+          </p>
+          
+          <div class="form-group">
+            <label for="name">
+              <i class="fas fa-user"></i>
+              Your Name
+            </label>
+            <input 
+              type="text" 
+              id="name" 
+              name="name" 
+              placeholder="John Doe" 
+              required
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="email">
+              <i class="fas fa-envelope"></i>
+              Your Email
+            </label>
+            <input 
+              type="email" 
+              id="email" 
+              name="email" 
+              placeholder="john@example.com" 
+              required
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="message">
+              <i class="fas fa-comment"></i>
+              Your Message
+            </label>
+            <textarea 
+              id="message" 
+              name="message" 
+              placeholder="Hello, I'd like to discuss a project..." 
+              rows="5" 
+              required
+            ></textarea>
+          </div>
+
+          <button type="submit" class="contact-btn">
+            <span>Send Message</span>
+            <i class="fas fa-paper-plane"></i>
+          </button>
+
+          <div class="form-status" id="formStatus"></div>
+          <div class="form-success" id="formSuccess" style="display: none;">
+            <i class="fas fa-check-circle"></i>
+            Thank you! Your message has been sent successfully.
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
