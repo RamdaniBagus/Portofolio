@@ -1,9 +1,5 @@
 <h2>Portfolio - Ramdani Bagus Indra Saputra</h2>
-https://img.shields.io/badge/Version-2.0.0-25b79f?style=for-the-badge
-https://img.shields.io/badge/Status-Active%2520%25F0%259F%259A%2580-25b79f?style=for-the-badge
-https://img.shields.io/badge/Netlify-Deployed-00C7B7?style=for-the-badge&logo=netlify
-https://img.shields.io/badge/Responsive-Yes-25b79f?style=for-the-badge
-<p align="center"> <img src="https://readme-typing-svg.demolab.com?font=Poppins&weight=600&size=28&duration=3000&pause=500&color=25B79F&center=true&vCenter=true&width=600&height=80&lines=Quality+Assurance;Software+Tester;Frontend+Enthusiast;UI%2FUX+Explorer" alt="Typing SVG" /> </p>
+<p align="center"> <img src="https://readme-typing-svg.demolab.com?font=Poppins&weight=600&size=28&duration=3000&pause=500&color=25B79F&center=true&vCenter=true&width=600&height=80&lines=Quality+Assurance;Software+Tester;UI%2FUX+Explorer" alt="Typing SVG" /> </p>
 
 ✨ About This Project
 A modern, responsive portfolio website built with HTML5, CSS3, and JavaScript. Designed specifically for Quality Assurance professionals. This portfolio showcases skills, experience, projects, and a fully functional Netlify contact form.
