@@ -119,6 +119,147 @@ transition:0.3s;
 width:100%;
 }
 
+/* Active menu style */
+.menu-items a.active {
+  color: #25b79f !important;
+}
+
+.menu-items a.active::after {
+  width: 100% !important;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 5px;
+  z-index: 1001;
+  position: relative;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  margin: 3px 0;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+  transform: translateX(-10px);
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .navbar-container {
+    position: relative;
+  }
+  
+  .hamburger {
+    display: flex;
+  }
+  
+  .menu-items {
+    position: fixed;
+    top: 70px;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 70px);
+    background: #07374a;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 50px;
+    transition: left 0.4s ease;
+    z-index: 999;
+  }
+  
+  .menu-items.active {
+    left: 0;
+  }
+  
+  .menu-items li {
+    margin: 20px 0;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .menu-items a {
+    display: block;
+    padding: 15px 0;
+    font-size: 1.2rem;
+    width: 100%;
+  }
+  
+  .menu-items a::after {
+    bottom: 5px;
+  }
+  
+  body.menu-open {
+    overflow: hidden;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .logo {
+    font-size: 20px;
+  }
+  
+  .hamburger span {
+    width: 22px;
+  }
+  
+  .menu-items {
+    top: 60px;
+    height: calc(100vh - 60px);
+  }
+}
+
+/* Fix untuk navbar solid */
+.navbar.solid {
+  background: #07374a;
+  padding: 10px 0;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.navbar.solid .logo {
+  color: white;
+}
+
+/* Animation untuk mobile menu */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.menu-items.active li {
+  animation: slideIn 0.4s ease forwards;
+  animation-delay: calc(0.1s * var(--i));
+}
+
+/* Tambahkan style untuk project-card yang duplikat (jika ingin dihapus) */
+.project-card.testing:last-child {
+  display: none; /* Sembunyikan project testing duplikat */
+}
+
 /* ==================================== */
 /* HOME - */
 /* ==================================== */

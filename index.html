@@ -26,11 +26,11 @@
   <div class="container navbar-container">
     <h2 class="logo">My Portofolio</h2>
     <ul class="menu-items">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#portfolio">Portfolio</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li style="--i:1"><a href="#home">Home</a></li>
+      <li style="--i:2"><a href="#about">About</a></li>
+      <li style="--i:3"><a href="#experience">Experience</a></li>
+      <li style="--i:4"><a href="#portfolio">Portfolio</a></li>
+      <li style="--i:5"><a href="#contact">Contact</a></li>
     </ul>
   </div>
 </nav>
@@ -286,6 +286,38 @@
       </div>
 
       <div class="projects-grid">
+
+        <!-- Programming - Kalkulator  -->
+        <div class="project-card programming">
+          <div class="project-header">
+            <div class="project-icon">
+              <i class="fa-solid fa-file-code"></i>
+            </div>
+            <span class="project-category"><i class="fas fa-mobile-alt"></i> Web</span>
+          </div>
+          
+          <h2 class="project-title">Calculator</h2>
+          
+          <p class="project-description">
+            Website for calculating numbers with dark mode feature.
+          </p>
+          
+          <div class="project-tech">
+            <span class="tech-tag">HTML</span>
+            <span class="tech-tag">CSS</span>
+            <span class="tech-tag">JavaScript</span>
+          </div>
+          
+          <div class="project-links">
+            <a href="https://github.com/RamdaniBagus/Calculator" 
+            target="blank"
+            class="project-btn">
+              <i class="fab fa-github"></i>
+              View Code
+            </a>
+          </div>
+        </div>
+
         <!-- Programming - Kalkulator Umur -->
         <div class="project-card programming">
           <div class="project-header">
@@ -349,6 +381,7 @@
         </div>
 
         <!-- Testing  -->
+
         <div class="project-card testing">
           <div class="project-header">
             <div class="project-icon">
@@ -356,23 +389,46 @@
             </div>
             <span class="project-category"><i class="fas fa-flask"></i> Testing</span>
           </div>
-          
           <h2 class="project-title">Web UI & API Automation Testing</h2>
-          
           <p class="project-description">
             Automated testing for web UI and API testing. Equipped with reporting, 
             data-driven testing, and CI/CD integration.
           </p>
-          
           <div class="project-tech">
             <span class="tech-tag">Selenium</span>
             <span class="tech-tag">Java</span>
             <span class="tech-tag">TestNG</span>
             <span class="tech-tag">Allure</span>
           </div>
-          
           <div class="project-links">
             <a href="https://github.com/RamdaniBagus/FinalProjectTest" 
+            target="blank"
+            class="project-btn">
+              <i class="fab fa-github"></i>
+              View Code
+            </a>
+          </div>
+        </div>
+
+          <div class="project-card testing">
+          <div class="project-header">
+            <div class="project-icon">
+              <i class="fas fa-bug"></i>
+            </div>
+            <span class="project-category"><i class="fas fa-flask"></i> Testing</span>
+          </div>
+          
+          <h2 class="project-title">Automation Testing Using Katalon</h2>
+          <p class="project-description">
+            Website testing using Katalon Studio to test functionality.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">Katalon Studio</span>
+            <span class="tech-tag">Dart</span>
+            <span class="tech-tag">Reporting</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/RamdaniBagus/Katalon" 
             target="blank"
             class="project-btn">
               <i class="fab fa-github"></i>
@@ -389,22 +445,72 @@
             <span class="project-category"><i class="fas fa-flask"></i> Testing</span>
           </div>
           
-          <h2 class="project-title">Web UI & API Automation Testing</h2>
-          
+          <h2 class="project-title">Scraping Book Data</h2>
           <p class="project-description">
-            Automated testing for web UI and API testing. Equipped with reporting, 
-            data-driven testing, and CI/CD integration.
+            Collecting book data from the website books.toscrape.com, create an Excel file, 
+            and send the data to Excel using the RPA robot framework.
           </p>
-          
           <div class="project-tech">
-            <span class="tech-tag">Selenium</span>
-            <span class="tech-tag">Java</span>
-            <span class="tech-tag">TestNG</span>
-            <span class="tech-tag">Allure</span>
+            <span class="tech-tag">Robot Framework</span>
+            <span class="tech-tag">HTML</span>
+            <span class="tech-tag">Json</span>
+            <span class="tech-tag">Reporting</span>
           </div>
-          
           <div class="project-links">
-            <a href="https://github.com/RamdaniBagus/FinalProjectTest" 
+            <a href="https://github.com/RamdaniBagus/Website-Scraping-Using-RobotFramework" 
+            target="blank"
+            class="project-btn">
+              <i class="fab fa-github"></i>
+              View Code
+            </a>
+          </div>
+        </div>
+
+          <div class="project-card testing">
+          <div class="project-header">
+            <div class="project-icon">
+              <i class="fas fa-bug"></i>
+            </div>
+            <span class="project-category"><i class="fas fa-flask"></i> Testing</span>
+          </div>
+          <h2 class="project-title">Scraping Gold Prices From Website With Running Scheduling</h2>
+          <p class="project-description">
+            Collecting gold prices data from Pegadaian website, 
+            then sending the data to an Excel file, and creating reports using the RPA robot framework.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">Robot Framework</span>
+            <span class="tech-tag">HTML</span>
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Json</span>
+            <span class="tech-tag">Reporting</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/RamdaniBagus/RobotFramework-Tests-With-Scheduler" 
+            target="blank"
+            class="project-btn">
+              <i class="fab fa-github"></i>
+              View Code
+            </a>
+          </div>
+        </div>
+
+          <div class="project-card testing">
+          <div class="project-header">
+            <div class="project-icon">
+              <i class="fas fa-bug"></i>
+            </div>
+            <span class="project-category"><i class="fas fa-flask"></i> Testing</span>
+          </div>
+          <h2 class="project-title">Performance Testing</h2>
+          <p class="project-description">
+            Practice using Jmeter to performance testing.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">JMeter</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/RamdaniBagus/Test_Jmeter" 
             target="blank"
             class="project-btn">
               <i class="fab fa-github"></i>

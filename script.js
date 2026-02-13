@@ -1,4 +1,4 @@
-// Navbar solid on scroll
+// ========== NAVBAR SOLID ON SCROLL ==========
 window.addEventListener("scroll", function(){
   const navbar = document.querySelector(".navbar");
   if(window.scrollY > 50){
@@ -6,15 +6,132 @@ window.addEventListener("scroll", function(){
   }else{
     navbar.classList.remove("solid");
   }
+  
+  // Panggil fungsi active menu saat scroll
+  updateActiveMenu();
 });
+
+// ========== NAVBAR RESPONSIVE ==========
+function createMobileMenu() {
+  const navbar = document.querySelector('.navbar');
+  const navbarContainer = document.querySelector('.navbar-container');
+  const menuItems = document.querySelector('.menu-items');
+  
+  // Buat hamburger button jika belum ada
+  if (!document.querySelector('.hamburger')) {
+    const hamburger = document.createElement('div');
+    hamburger.className = 'hamburger';
+    hamburger.innerHTML = `
+      <span></span>
+      <span></span>
+      <span></span>
+    `;
+    
+    // Insert hamburger setelah logo
+    const logo = document.querySelector('.logo');
+    logo.parentNode.insertBefore(hamburger, logo.nextSibling);
+    
+    // Event listener untuk hamburger
+    hamburger.addEventListener('click', function(e) {
+      e.stopPropagation();
+      this.classList.toggle('active');
+      menuItems.classList.toggle('active');
+      document.body.classList.toggle('menu-open');
+    });
+  }
+  
+  // Close menu when clicking outside
+  document.addEventListener('click', function(e) {
+    const hamburger = document.querySelector('.hamburger');
+    const menu = document.querySelector('.menu-items');
+    
+    if (hamburger && menu && menu.classList.contains('active')) {
+      if (!e.target.closest('.navbar-container')) {
+        hamburger.classList.remove('active');
+        menu.classList.remove('active');
+        document.body.classList.remove('menu-open');
+      }
+    }
+  });
+  
+  // Close menu when clicking on menu items
+  const menuLinks = document.querySelectorAll('.menu-items a');
+  menuLinks.forEach(link => {
+    link.addEventListener('click', function() {
+      const hamburger = document.querySelector('.hamburger');
+      const menu = document.querySelector('.menu-items');
+      hamburger.classList.remove('active');
+      menu.classList.remove('active');
+      document.body.classList.remove('menu-open');
+    });
+  });
+}
+
+// ========== ACTIVE MENU ON SCROLL ==========
+function updateActiveMenu() {
+  const sections = document.querySelectorAll('section, header');
+  const navLinks = document.querySelectorAll('.menu-items a');
+  
+  let currentSection = '';
+  
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 100; // Offset untuk navbar
+    const sectionHeight = section.clientHeight;
+    const sectionId = section.getAttribute('id');
+    
+    if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+      currentSection = sectionId;
+    }
+  });
+  
+  navLinks.forEach(link => {
+    link.classList.remove('active');
+    const href = link.getAttribute('href').substring(1); // Hapus # dari href
+    
+    if (href === currentSection) {
+      link.classList.add('active');
+    }
+  });
+}
+
+// ========== SMOOTH SCROLL WITH OFFSET ==========
+function initSmoothScroll() {
+  const navLinks = document.querySelectorAll('.menu-items a');
+  
+  navLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      
+      const targetId = this.getAttribute('href');
+      const targetSection = document.querySelector(targetId);
+      
+      if (targetSection) {
+        const navbarHeight = document.querySelector('.navbar').offsetHeight;
+        const targetPosition = targetSection.offsetTop - navbarHeight;
+        
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+}
 
 // ========== PORTFOLIO FILTER ==========
 document.addEventListener("DOMContentLoaded", function() {
+  // Initialize responsive menu
+  createMobileMenu();
+  
+  // Initialize smooth scroll
+  initSmoothScroll();
+  
+  // Initialize active menu
+  updateActiveMenu();
   
   const filterButtons = document.querySelectorAll(".filter-btn");
   const projectCards = document.querySelectorAll(".project-card");
 
-  // Fungsi filter
   function filterProjects(filterValue) {
     projectCards.forEach(card => {
       if (filterValue === "all") {
@@ -29,7 +146,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
 
-  // Event listener untuk setiap button
   filterButtons.forEach(button => {
     button.addEventListener("click", function(e) {
       e.preventDefault();
@@ -42,7 +158,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 
-  // INITIAL STATE
   projectCards.forEach(card => {
     card.classList.remove("hidden");
   });
@@ -60,34 +175,28 @@ document.addEventListener("DOMContentLoaded", function() {
   const formSuccess = document.getElementById("formSuccess");
 
   if (contactForm) {
-    // Cek apakah ini Netlify Form
     if (contactForm.getAttribute("data-netlify") === "true") {
       console.log("Netlify Form detected");
       
-      // Handle form submission dengan AJAX
       contactForm.addEventListener("submit", function(e) {
-        e.preventDefault(); // Hanya untuk AJAX, jika tidak pakai redirect
+        e.preventDefault();
         
         const button = this.querySelector(".contact-btn");
         const originalHTML = button.innerHTML;
         
-        // Loading state
         button.disabled = true;
         button.innerHTML = '<span>Sending...</span> <i class="fas fa-spinner fa-spin"></i>';
         formStatus.style.display = "none";
         
-        // Kirim form dengan fetch API
         fetch("/", {
           method: "POST",
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
           body: new URLSearchParams(new FormData(contactForm)).toString()
         })
         .then(() => {
-          // Success
           button.innerHTML = '<span>Message Sent!</span> <i class="fas fa-check"></i>';
           button.style.background = "linear-gradient(45deg, #28a745, #218838)";
           
-          // Tampilkan pesan sukses
           if (formSuccess) {
             formSuccess.style.display = "block";
             formStatus.style.display = "none";
@@ -97,10 +206,8 @@ document.addEventListener("DOMContentLoaded", function() {
             formStatus.style.display = "block";
           }
           
-          // Reset form
           contactForm.reset();
           
-          // Reset button setelah 5 detik
           setTimeout(() => {
             button.disabled = false;
             button.innerHTML = originalHTML;
@@ -123,7 +230,6 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 // ========== DETEKSI NETLIFY SUCCESS PARAMETER ==========
-// Untuk menampilkan pesan sukses jika redirect balik ke halaman
 window.addEventListener("DOMContentLoaded", function() {
   const urlParams = new URLSearchParams(window.location.search);
   if (urlParams.has("success")) {
